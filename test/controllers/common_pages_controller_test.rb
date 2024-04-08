@@ -14,7 +14,8 @@ class CommonPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get common_pages_home_url
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", @base_title
+    #assert_select "title", "Home | 🐞Buburuza"
   end
 
   test "should get help" do
